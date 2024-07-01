@@ -9,9 +9,25 @@ class Podracer:
         self.condition = "repaired"
 
 
-Anakin_Skywalker = Podracer(200, "trashed", 500)
+class AnakinsPod(Podracer):
+    def __init__(self, max_speed, condition, price):
+        super().__init__(max_speed, condition, price)
 
-print(Anakin_Skywalker.repair())
+    def boost(self):
+        return self.max_speed * 2    
 
-print(Anakin_Skywalker.condition)
 
+# Anakin_Skywalker = Podracer(200, "trashed", 500)
+
+# print(Anakin_Skywalker.repair())
+
+# print(Anakin_Skywalker.condition)
+
+apod = AnakinsPod(33, "trashed", 200)
+
+
+
+print(apod.max_speed, apod.condition, apod.price)
+
+print(apod.boost())
++
